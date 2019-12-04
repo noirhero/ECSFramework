@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# coco2dx
+cocos2d/
+Resources/
+
+# Visual Sutdio Ignore Files
+*.user
+*vs/
