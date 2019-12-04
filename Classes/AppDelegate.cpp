@@ -69,7 +69,9 @@ void AppDelegate::initGLContextAttrs() {
 
 // if you want to use the package manager to install more packages,  
 // don't modify or remove this function
-static int register_all_packages() {
+static int RegisterAllPackages() noexcept {
+    ZipUtils::setPvrEncryptionKey(0xf3ee71be, 0x8718cf35, 0xcf5d3bf7, 0x1289a300);
+
     return 0; //flag for packages manager
 }
 
@@ -108,7 +110,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setContentScaleFactor(MIN(smallResolutionSize.height / designResolutionSize.height, smallResolutionSize.width / designResolutionSize.width));
     }
 
-    register_all_packages();
+    RegisterAllPackages();
 
     // create a scene. it's an autorelease object
     auto scene = new FrameworkScene();

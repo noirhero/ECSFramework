@@ -36,27 +36,37 @@ bool HelloWorldLayer::init() {
         addChild(label, 1);
     }
 
-    auto sprite = Sprite3D::create("ch02_01.c3b");
-    if (sprite == nullptr) {
+    auto sprite = Sprite::create("loading_title_a0.pvr.ccz");
+    if(sprite == nullptr) {
         return false;
     }
     else {
-        sprite->setScale(5.0f);
-        sprite->setRotation3D({ 0.0f, 0.0f, 0.0f });
+        //sprite->setRotation3D({ 0.0f, 0.0f, 0.0f });
         sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+        addChild(sprite, 1);
+    }
+
+    auto character = Sprite3D::create("ch02_01.c3b");
+    if (character == nullptr) {
+        return false;
+    }
+    else {
+        character->setScale(5.0f);
+        character->setRotation3D({ 0.0f, 0.0f, 0.0f });
+        character->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
 
         const auto animation = Animation3D::create("ch02_01_idle01.c3b");
         const auto animate = Animate3D::create(animation);
-        sprite->runAction(RepeatForever::create(animate));
+        character->runAction(RepeatForever::create(animate));
 
         auto& world = gsl::not_null<FrameworkScene*>(static_cast<FrameworkScene*>(getScene()))->GetWorld();
         const auto entity = world.create();
         world.assign<ComponentInputBind>(entity);
-        world.assign<ComponentPos>(entity, sprite->getPosition3D());
+        world.assign<ComponentPos>(entity, character->getPosition3D());
         world.assign<ComponentVelocity>(entity);
-        world.assign<ComponentSprite3D>(entity, sprite);
+        world.assign<ComponentSprite3D>(entity, character);
 
-        addChild(sprite, 0);
+        addChild(character, 0);
     }
 
     return true;
