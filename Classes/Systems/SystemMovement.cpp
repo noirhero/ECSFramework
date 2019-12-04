@@ -8,7 +8,7 @@
 namespace SystemMovement {
     void Update(entt::DefaultRegistry& world, float delta) {
         world.view<ComponentPos, ComponentVelocity>().each([&world, delta](auto entity, auto& pos, auto& velocity) {
-            pos.value += velocity.value * delta;
+            pos.value += velocity.value * delta * 10.0f;
 
             if(world.has<ComponentSprite3D>(entity)) {
                 auto& compSpr3D = world.get<ComponentSprite3D>(entity);

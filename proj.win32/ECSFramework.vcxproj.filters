@@ -40,6 +40,9 @@
     <ClCompile Include="..\Classes\Systems\SystemInputKeyboard.cpp">
       <Filter>Classes\Systems</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Systems\SystemVelocity.cpp">
+      <Filter>Classes\Systems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -160,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Components\ComponentSprite3D.h">
       <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Systems\SystemVelocity.h">
+      <Filter>Classes\Systems</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

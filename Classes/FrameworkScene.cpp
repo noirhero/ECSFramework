@@ -29,6 +29,6 @@ bool FrameworkScene::init() {
 }
 
 void FrameworkScene::update(float delta) {
-    SystemInputKeyboard::Update(_world, delta);
+    SystemVelocity::Update(_world, delta);
     SystemMovement::Update(_world, delta);
 }

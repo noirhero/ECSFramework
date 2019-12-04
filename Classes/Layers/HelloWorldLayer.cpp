@@ -6,8 +6,6 @@
 #include "../Components/ComponentPCH.h"
 #include "../FrameworkScene.h"
 
-using namespace cocos2d;
-
 bool HelloWorldLayer::init() {
     const auto visibleSize = Director::getInstance()->getVisibleSize();
     const auto origin = Director::getInstance()->getVisibleOrigin();
@@ -41,9 +39,11 @@ bool HelloWorldLayer::init() {
         return false;
     }
     else {
-        //sprite->setRotation3D({ 0.0f, 0.0f, 0.0f });
+        const auto scaleRatio = visibleSize.width / sprite->getContentSize().width;
+        sprite->setScale(scaleRatio);
         sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
-        addChild(sprite, 1);
+        sprite->setGlobalZOrder(-1);
+        addChild(sprite, 0);
     }
 
     auto character = Sprite3D::create("ch02_01.c3b");
@@ -66,7 +66,7 @@ bool HelloWorldLayer::init() {
         world.assign<ComponentVelocity>(entity);
         world.assign<ComponentSprite3D>(entity, character);
 
-        addChild(character, 0);
+        addChild(character, 1);
     }
 
     return true;

@@ -3,28 +3,20 @@
 #include "../../pch.h"
 #include "SystemInputKeyboard.h"
 
-#include "../Components/ComponentPCH.h"
-
-using namespace cocos2d;
-
 namespace SystemInputKeyboard {
     std::unique_ptr<EventListenerKeyboard>  _inputListener;
-    Vec3                                    _inputVelocity;
+    std::set<EventKeyboard::KeyCode>        _pressCodes;
 
     void OnKeyPressed(EventKeyboard::KeyCode code, Event* /*event*/) {
-        switch(code) {
-        case EventKeyboard::KeyCode::KEY_W: _inputVelocity += Vec3::UNIT_Z; break;
-        case EventKeyboard::KeyCode::KEY_S: _inputVelocity -= Vec3::UNIT_Z; break;
-        default:;
-        }
+        _pressCodes.insert(code);
     }
 
     void OnKeyReleased(EventKeyboard::KeyCode code, Event* /*event*/) {
-        switch(code) {
-        case EventKeyboard::KeyCode::KEY_W: _inputVelocity -= Vec3::UNIT_Z; break;
-        case EventKeyboard::KeyCode::KEY_S: _inputVelocity += Vec3::UNIT_Z; break;
-        default:;
-        }
+        _pressCodes.erase(code);
+    }
+
+    bool IsPress(EventKeyboard::KeyCode code) {
+        return (_pressCodes.end() == _pressCodes.find(code)) ? false : true;
     }
 
     bool Initialize(Scene& scene) {
@@ -39,11 +31,4 @@ namespace SystemInputKeyboard {
 
         return true;
     }
-
-    void Update(entt::DefaultRegistry& world, float /*delta*/) {
-        world.view<ComponentVelocity>().each([](auto entity, auto& velocity) -> void {
-            velocity.value += _inputVelocity;
-        });
-    }
-
 }

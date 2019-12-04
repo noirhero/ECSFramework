@@ -14,7 +14,7 @@
     <ProjectGuid>{76A39BB2-9B84-4C65-98A5-654D86B86F2A}</ProjectGuid>
     <RootNamespace>test_win32</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -158,6 +158,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Layers\HelloWorldLayer.cpp" />
     <ClCompile Include="..\Classes\Systems\SystemInputKeyboard.cpp" />
     <ClCompile Include="..\Classes\Systems\SystemMovement.cpp" />
+    <ClCompile Include="..\Classes\Systems\SystemVelocity.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +173,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Systems\SystemInputKeyboard.h" />
     <ClInclude Include="..\Classes\Systems\SystemMovement.h" />
     <ClInclude Include="..\Classes\Systems\SystemPCH.h" />
+    <ClInclude Include="..\Classes\Systems\SystemVelocity.h" />
     <ClInclude Include="..\External\entt\config\config.h" />
     <ClInclude Include="..\External\entt\core\algorithm.hpp" />
     <ClInclude Include="..\External\entt\core\family.hpp" />

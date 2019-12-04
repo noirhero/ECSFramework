@@ -4,5 +4,5 @@
 
 namespace SystemInputKeyboard {
     bool Initialize(Scene& scene);
-    void Update(entt::DefaultRegistry& world, float delta);
+    bool IsPress(EventKeyboard::KeyCode code);
 }

@@ -3,4 +3,5 @@
 #pragma once
 
 #include "SystemInputKeyboard.h"
+#include "SystemVelocity.h"
 #include "SystemMovement.h"
