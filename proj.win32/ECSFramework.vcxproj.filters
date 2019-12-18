@@ -22,6 +22,9 @@
     <Filter Include="Classes\Systems">
       <UniqueIdentifier>{60f8d4c5-216c-4b57-8d5d-8bf1e82814f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Utils">
+      <UniqueIdentifier>{1d913dd8-c59f-4df7-b681-581dc1e68048}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
@@ -42,6 +45,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Systems\SystemVelocity.cpp">
       <Filter>Classes\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Layers\IntroLayer.cpp">
+      <Filter>Classes\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Utils\UtilLayer.cpp">
+      <Filter>Classes\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +175,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Systems\SystemVelocity.h">
       <Filter>Classes\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Layers\IntroLayer.h">
+      <Filter>Classes\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\UtilLayer.h">
+      <Filter>Classes\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\UtilPCH.h">
+      <Filter>Classes\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

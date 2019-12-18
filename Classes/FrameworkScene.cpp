@@ -4,23 +4,23 @@
 #include "FrameworkScene.h"
 
 #include "Systems/SystemPCH.h"
-#include "Layers/HelloWorldLayer.h"
+#include "Layers/IntroLayer.h"
 
 bool FrameworkScene::init() {
     if (false == Scene::init()) {
         return false;
     }
 
-    if(false == SystemInputKeyboard::Initialize(*this)) {
+    if (false == SystemInputKeyboard::Initialize(*this)) {
         return false;
     }
 
-    gsl::not_null<Layer*> introLayer = new HelloWorldLayer();
+    gsl::not_null<Layer*> introLayer = new IntroLayer();
+    introLayer->autorelease();
     addChild(introLayer);
 
-    if(false == introLayer->init()) {
+    if (false == introLayer->init()) {
         removeChild(introLayer);
-        delete introLayer;
         return false;
     }
 

@@ -120,6 +120,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     // run
+    scene->autorelease();
     director->runWithScene(scene);
 
     return true;
