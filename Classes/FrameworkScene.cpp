@@ -3,8 +3,14 @@
 #include "../pch.h"
 #include "FrameworkScene.h"
 
+#include "Utils/UtilPCH.h"
 #include "Systems/SystemPCH.h"
 #include "Layers/IntroLayer.h"
+
+FrameworkScene::~FrameworkScene() {
+    UtilSound::StopAll();
+    UtilSound::End();
+}
 
 bool FrameworkScene::init() {
     if (false == Scene::init()) {

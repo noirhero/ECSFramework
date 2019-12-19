@@ -157,10 +157,12 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\FrameworkScene.cpp" />
     <ClCompile Include="..\Classes\Layers\HelloWorldLayer.cpp" />
     <ClCompile Include="..\Classes\Layers\IntroLayer.cpp" />
+    <ClCompile Include="..\Classes\Layers\MainLayer.cpp" />
     <ClCompile Include="..\Classes\Systems\SystemInputKeyboard.cpp" />
     <ClCompile Include="..\Classes\Systems\SystemMovement.cpp" />
     <ClCompile Include="..\Classes\Systems\SystemVelocity.cpp" />
     <ClCompile Include="..\Classes\Utils\UtilLayer.cpp" />
+    <ClCompile Include="..\Classes\Utils\UtilSound.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -173,12 +175,14 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\FrameworkScene.h" />
     <ClInclude Include="..\Classes\Layers\HelloWorldLayer.h" />
     <ClInclude Include="..\Classes\Layers\IntroLayer.h" />
+    <ClInclude Include="..\Classes\Layers\MainLayer.h" />
     <ClInclude Include="..\Classes\Systems\SystemInputKeyboard.h" />
     <ClInclude Include="..\Classes\Systems\SystemMovement.h" />
     <ClInclude Include="..\Classes\Systems\SystemPCH.h" />
     <ClInclude Include="..\Classes\Systems\SystemVelocity.h" />
     <ClInclude Include="..\Classes\Utils\UtilLayer.h" />
     <ClInclude Include="..\Classes\Utils\UtilPCH.h" />
+    <ClInclude Include="..\Classes\Utils\UtilSound.h" />
     <ClInclude Include="..\External\entt\config\config.h" />
     <ClInclude Include="..\External\entt\core\algorithm.hpp" />
     <ClInclude Include="..\External\entt\core\family.hpp" />

@@ -52,6 +52,12 @@
     <ClCompile Include="..\Classes\Utils\UtilLayer.cpp">
       <Filter>Classes\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Layers\MainLayer.cpp">
+      <Filter>Classes\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Utils\UtilSound.cpp">
+      <Filter>Classes\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -183,6 +189,12 @@
       <Filter>Classes\Utils</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Utils\UtilPCH.h">
+      <Filter>Classes\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Layers\MainLayer.h">
+      <Filter>Classes\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\UtilSound.h">
       <Filter>Classes\Utils</Filter>
     </ClInclude>
   </ItemGroup>

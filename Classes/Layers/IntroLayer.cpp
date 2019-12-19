@@ -3,33 +3,30 @@
 #include "../../pch.h"
 #include "IntroLayer.h"
 
+#include "MainLayer.h"
 #include "../Utils/UtilPCH.h"
 
 bool IntroLayer::init() {
-    const auto visibleSize = Director::getInstance()->getVisibleSize();
+    const auto size = Director::getInstance()->getVisibleSize();
     const auto origin = Director::getInstance()->getVisibleOrigin();
 
-    auto sprite = Sprite::create("loading_title_a0.pvr.ccz");
-    if (sprite == nullptr) {
+    auto introImage = Sprite::create("loading_title_a0.pvr.ccz");
+    if (introImage == nullptr) {
         return false;
     }
-    else {
-        const auto scaleRatio = visibleSize.width / sprite->getContentSize().width;
-        sprite->setOpacity(0);
-        sprite->setScale(scaleRatio);
-        sprite->setPosition(Vec2(visibleSize.width * 0.5f + origin.x, visibleSize.height * 0.5f + origin.y));
-        addChild(sprite, 0);
+    const auto scaleRatio = size.width / introImage->getContentSize().width;
+    introImage->setOpacity(0);
+    introImage->setScale(scaleRatio);
+    introImage->setPosition(Vec2(size.width * 0.5f + origin.x, size.height * 0.5f + origin.y));
+    addChild(introImage);
 
-        constexpr auto delay = 1.0f;
-        const auto completeFn = CallFuncN::create(CC_CALLBACK_0(IntroLayer::CompleteIntro, this));
-        sprite->runAction(Sequence::create(FadeIn::create(delay), DelayTime::create(delay), FadeOut::create(delay), completeFn, nullptr));
-    }
+    constexpr auto delay = 0.1f;
+    const auto completeFn = CallFuncN::create(CC_CALLBACK_0(IntroLayer::CompleteIntro, this));
+    introImage->runAction(Sequence::create(FadeIn::create(delay), DelayTime::create(delay), FadeOut::create(delay), completeFn, nullptr));
 
     return true;
 }
 
 void IntroLayer::CompleteIntro() {
-    CCLOG("Sequence complete!!!!!");
-
-    UtilLayer::ChangeAndThenDelete(new IntroLayer, this);
+    UtilLayer::ChangeAndThenDelete(new MainLayer, this);
 }

@@ -4,6 +4,8 @@
 
 class FrameworkScene : public Scene {
 public:
+    ~FrameworkScene();
+
     bool                    init() override;
     void                    update(float delta) override;
 
