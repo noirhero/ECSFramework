@@ -1,8 +1,9 @@
-// Copyright 2018-2019 TAP, Inc. All Rights Reserved.
+// Copyright 2018-2020 TAP, Inc. All Rights Reserved.
 
 #pragma once
 
 #define WIN32_LEAN_AND_MEAN
+
 #include <windows.h>
 #include <tchar.h>
 

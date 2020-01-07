@@ -1,233 +1,162 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="External">
-      <UniqueIdentifier>{4e7856e3-425a-4400-aec0-5c41877962f0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="External\gsl">
-      <UniqueIdentifier>{ef30e251-60c1-4f17-bc34-445063b614d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="External\entt">
-      <UniqueIdentifier>{ce735736-4550-4913-9b77-558af4827d5d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes">
-      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\Layers">
-      <UniqueIdentifier>{2ebb5fc4-b857-45ac-984e-6359f1dd3e2a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\Components">
-      <UniqueIdentifier>{033bc9fc-befa-462b-9613-b8e3514271d1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\Systems">
-      <UniqueIdentifier>{60f8d4c5-216c-4b57-8d5d-8bf1e82814f3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\Utils">
-      <UniqueIdentifier>{1d913dd8-c59f-4df7-b681-581dc1e68048}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>Classes</Filter>
+    <ClCompile Include="D:\cocos\projects\ECSFramework\Classes\AppDelegate.cpp">
+      <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\FrameworkScene.cpp">
-      <Filter>Classes</Filter>
+    <ClCompile Include="D:\cocos\projects\ECSFramework\proj.win32\main.cpp">
+      <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="D:\cocos\projects\ECSFramework\cocos2d\cocos\precheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\Layers\HelloWorldLayer.cpp">
-      <Filter>Classes\Layers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Systems\SystemMovement.cpp">
-      <Filter>Classes\Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Systems\SystemInputKeyboard.cpp">
-      <Filter>Classes\Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Systems\SystemVelocity.cpp">
-      <Filter>Classes\Systems</Filter>
+      <Filter>Source Files\Classes\Layers</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Layers\IntroLayer.cpp">
-      <Filter>Classes\Layers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Utils\UtilLayer.cpp">
-      <Filter>Classes\Utils</Filter>
+      <Filter>Source Files\Classes\Layers</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Layers\MainLayer.cpp">
-      <Filter>Classes\Layers</Filter>
+      <Filter>Source Files\Classes\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Systems\SystemInputKeyboard.cpp">
+      <Filter>Source Files\Classes\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Systems\SystemMovement.cpp">
+      <Filter>Source Files\Classes\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Systems\SystemVelocity.cpp">
+      <Filter>Source Files\Classes\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Utils\UtilLayer.cpp">
+      <Filter>Source Files\Classes\Utils</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Utils\UtilSound.cpp">
-      <Filter>Classes\Utils</Filter>
+      <Filter>Source Files\Classes\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FrameworkScene.cpp">
+      <Filter>Source Files\Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>Classes</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Classes\AppDelegate.h">
+      <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\External\entt\config\config.h">
-      <Filter>External\entt</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\proj.win32\main.h">
+      <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\External\entt\core\algorithm.hpp">
-      <Filter>External\entt</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\proj.win32\resource.h">
+      <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\External\entt\core\family.hpp">
-      <Filter>External\entt</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\CloseNormal.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="..\External\entt\core\hashed_string.hpp">
-      <Filter>External\entt</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\CloseSelected.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="..\External\entt\core\ident.hpp">
-      <Filter>External\entt</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\HelloWorld.png">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="..\External\entt\core\monostate.hpp">
-      <Filter>External\entt</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\fonts\Marker Felt.ttf">
+      <Filter>Resources\fonts</Filter>
     </ClInclude>
-    <ClInclude Include="..\External\entt\entity\actor.hpp">
-      <Filter>External\entt</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\fonts\arial.ttf">
+      <Filter>Resources\fonts</Filter>
     </ClInclude>
-    <ClInclude Include="..\External\entt\entity\attachee.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\entity.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\entt_traits.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\helper.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\prototype.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\registry.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\snapshot.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\sparse_set.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\utility.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entity\view.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\locator\locator.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\process\process.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\process\scheduler.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\resource\cache.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\resource\handle.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\resource\loader.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\signal\delegate.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\signal\dispatcher.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\signal\emitter.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\signal\sigh.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\External\entt\entt.hpp">
-      <Filter>External\entt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\FrameworkScene.h">
-      <Filter>Classes</Filter>
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\res\.gitkeep">
+      <Filter>Resources\res</Filter>
     </ClInclude>
     <ClInclude Include="..\pch.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="..\Classes\Layers\HelloWorldLayer.h">
-      <Filter>Classes\Layers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Components\ComponentPos.h">
-      <Filter>Classes\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Components\ComponentVelocity.h">
-      <Filter>Classes\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Systems\SystemMovement.h">
-      <Filter>Classes\Systems</Filter>
+    <ClInclude Include="..\Classes\Components\ComponentInputBind.h">
+      <Filter>Source Files\Classes\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Components\ComponentPCH.h">
-      <Filter>Classes\Components</Filter>
+      <Filter>Source Files\Classes\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Systems\SystemPCH.h">
-      <Filter>Classes\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Systems\SystemInputKeyboard.h">
-      <Filter>Classes\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Components\ComponentInputBind.h">
-      <Filter>Classes\Components</Filter>
+    <ClInclude Include="..\Classes\Components\ComponentPos.h">
+      <Filter>Source Files\Classes\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Components\ComponentSprite3D.h">
-      <Filter>Classes\Components</Filter>
+      <Filter>Source Files\Classes\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Systems\SystemVelocity.h">
-      <Filter>Classes\Systems</Filter>
+    <ClInclude Include="..\Classes\Components\ComponentVelocity.h">
+      <Filter>Source Files\Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Layers\HelloWorldLayer.h">
+      <Filter>Source Files\Classes\Layers</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Layers\IntroLayer.h">
-      <Filter>Classes\Layers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Utils\UtilLayer.h">
-      <Filter>Classes\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Utils\UtilPCH.h">
-      <Filter>Classes\Utils</Filter>
+      <Filter>Source Files\Classes\Layers</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Layers\MainLayer.h">
-      <Filter>Classes\Layers</Filter>
+      <Filter>Source Files\Classes\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Systems\SystemInputKeyboard.h">
+      <Filter>Source Files\Classes\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Systems\SystemMovement.h">
+      <Filter>Source Files\Classes\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Systems\SystemPCH.h">
+      <Filter>Source Files\Classes\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Systems\SystemVelocity.h">
+      <Filter>Source Files\Classes\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\UtilLayer.h">
+      <Filter>Source Files\Classes\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\UtilPCH.h">
+      <Filter>Source Files\Classes\Utils</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Utils\UtilSound.h">
-      <Filter>Classes\Utils</Filter>
+      <Filter>Source Files\Classes\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FrameworkScene.h">
+      <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\External\gsl\gsl">
-      <Filter>External\gsl</Filter>
-    </None>
-    <None Include="..\External\gsl\gsl_algorithm">
-      <Filter>External\gsl</Filter>
-    </None>
-    <None Include="..\External\gsl\gsl_assert">
-      <Filter>External\gsl</Filter>
-    </None>
-    <None Include="..\External\gsl\gsl_byte">
-      <Filter>External\gsl</Filter>
-    </None>
-    <None Include="..\External\gsl\gsl_util">
-      <Filter>External\gsl</Filter>
-    </None>
-    <None Include="..\External\gsl\multi_span">
-      <Filter>External\gsl</Filter>
-    </None>
-    <None Include="..\External\gsl\pointers">
-      <Filter>External\gsl</Filter>
-    </None>
-    <None Include="..\External\gsl\span">
-      <Filter>External\gsl</Filter>
-    </None>
-    <None Include="..\External\gsl\string_span">
-      <Filter>External\gsl</Filter>
-    </None>
+    <CustomBuild Include="D:\cocos\projects\ECSFramework\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="game.rc" />
+    <ResourceCompile Include="D:\cocos\projects\ECSFramework\proj.win32\game.rc">
+      <Filter>Source Files\proj.win32</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{D628E65D-8662-3C5D-8CC9-8CC03AEF2098}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\fonts">
+      <UniqueIdentifier>{F94DE682-80CC-3D4E-ACF8-02D0B983FBCE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res">
+      <UniqueIdentifier>{7102790E-14E9-3958-95CA-DD7399006762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4DD1051C-D67A-34CE-AF94-00E62E72400E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes">
+      <UniqueIdentifier>{0BD16882-6BF0-36B9-A44D-1CCACBD0121E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32">
+      <UniqueIdentifier>{4AFE3C34-E7A2-39BF-9039-E2E8F3294F4E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Components">
+      <UniqueIdentifier>{47f4df02-5042-486e-9a92-d7ac43fd4faa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Layers">
+      <UniqueIdentifier>{3113fc68-50a2-4802-91f4-140cbbc56c3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Systems">
+      <UniqueIdentifier>{0f290e87-4a80-4efd-a274-b31c162bcf8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Utils">
+      <UniqueIdentifier>{de8929b6-5ab7-4f04-942e-989a77786d0c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.gitignore" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-// Copyright 2018-2019 TAP, Inc. All Rights Reserved.
+// Copyright 2018-2020 TAP, Inc. All Rights Reserved.
 
 #include "../pch.h"
 #include "AppDelegate.h"
@@ -15,8 +15,6 @@ namespace {
 AppDelegate::~AppDelegate() {
 #if USE_AUDIO_ENGINE
     AudioEngine::end();
-#elif USE_SIMPLE_AUDIO_ENGINE
-    SimpleAudioEngine::end();
 #endif
 }
 
@@ -48,7 +46,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     director->setDisplayStats(true);
-    director->setAnimationInterval(1.0f / 60);
+    director->setAnimationInterval(1.0f / 30.0f);
 
     glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
     const auto frameSize = glview->getFrameSize();
@@ -82,9 +80,6 @@ void AppDelegate::applicationDidEnterBackground() {
 
 #if USE_AUDIO_ENGINE
     AudioEngine::pauseAll();
-#elif USE_SIMPLE_AUDIO_ENGINE
-    SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
-    SimpleAudioEngine::getInstance()->pauseAllEffects();
 #endif
 }
 
@@ -94,8 +89,5 @@ void AppDelegate::applicationWillEnterForeground() {
 
 #if USE_AUDIO_ENGINE
     AudioEngine::resumeAll();
-#elif USE_SIMPLE_AUDIO_ENGINE
-    SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
-    SimpleAudioEngine::getInstance()->resumeAllEffects();
 #endif
 }

@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -11,162 +14,415 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{76A39BB2-9B84-4C65-98A5-654D86B86F2A}</ProjectGuid>
-    <RootNamespace>test_win32</RootNamespace>
-    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{C93653AF-DF40-3184-84E1-2304838102D0}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ECSFramework</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v120_xp</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v140_xp</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v141_xp</PlatformToolset>
-    <PlatformToolset>v142</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v120_xp</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v140_xp</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v141_xp</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\cocos2d\cocos\2d\cocos2dx.props" />
-    <Import Project="..\cocos2d\cocos\2d\cocos2d_headers.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\cocos2d\cocos\2d\cocos2dx.props" />
-    <Import Project="..\cocos2d\cocos\2d\cocos2d_headers.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration).win32\</IntDir>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\cocos\projects\ECSFramework\proj.win32\bin\ECSFramework\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ECSFramework.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ECSFramework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration).win32\</IntDir>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\cocos\projects\ECSFramework\proj.win32\bin\ECSFramework\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ECSFramework.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ECSFramework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(ProjectDir)../External;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)../External;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(ProjectDir)../External;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)../External;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(EngineRoot);$(EngineRoot)external;$(EngineRoot)cocos\audio\include;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>D:\cocos\projects\ECSFramework\Classes;D:\cocos\projects\ECSFramework\cocos2d\cocos\audio\include;D:\cocos\projects\ECSFramework\cocos2d;D:\cocos\projects\ECSFramework\cocos2d\cocos;D:\cocos\projects\ECSFramework\cocos2d\extensions;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform;D:\cocos\projects\ECSFramework\cocos2d\cocos\editor-support;D:\cocos\projects\ECSFramework\cocos2d\cocos\base;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform\win32;D:\cocos\projects\ECSFramework\cocos2d\external\recast\..;D:\cocos\projects\ECSFramework\cocos2d\external\tinyxml2\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxhash\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxtea\.;D:\cocos\projects\ECSFramework\cocos2d\external\clipper\.;D:\cocos\projects\ECSFramework\cocos2d\external\edtaa3func\.;D:\cocos\projects\ECSFramework\cocos2d\external\ConvertUTF\.;D:\cocos\projects\ECSFramework\cocos2d\external\poly2tri\..;D:\cocos\projects\ECSFramework\cocos2d\external\md5\..;D:\cocos\projects\ECSFramework\cocos2d\external\unzip\.;D:\cocos\projects\ECSFramework\cocos2d\external\Box2D\include;D:\cocos\projects\ECSFramework\cocos2d\external\chipmunk\include;D:\cocos\projects\ECSFramework\cocos2d\external\freetype2\include\win32\freetype2;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include\bullet;D:\cocos\projects\ECSFramework\cocos2d\external\jpeg\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\openssl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\uv\include;D:\cocos\projects\ECSFramework\cocos2d\external\webp\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\websockets\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\curl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\png\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\gles\include\OGLES;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\icon\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\MP3Decoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OggDecoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OpenalSoft\include;D:\cocos\projects\ECSFramework\cocos2d\external\glfw3\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <WarningLevel>Level4</WarningLevel>
+      <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\cocos\projects\ECSFramework\Classes;D:\cocos\projects\ECSFramework\cocos2d\cocos\audio\include;D:\cocos\projects\ECSFramework\cocos2d;D:\cocos\projects\ECSFramework\cocos2d\cocos;D:\cocos\projects\ECSFramework\cocos2d\extensions;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform;D:\cocos\projects\ECSFramework\cocos2d\cocos\editor-support;D:\cocos\projects\ECSFramework\cocos2d\cocos\base;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform\win32;D:\cocos\projects\ECSFramework\cocos2d\external\recast\..;D:\cocos\projects\ECSFramework\cocos2d\external\tinyxml2\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxhash\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxtea\.;D:\cocos\projects\ECSFramework\cocos2d\external\clipper\.;D:\cocos\projects\ECSFramework\cocos2d\external\edtaa3func\.;D:\cocos\projects\ECSFramework\cocos2d\external\ConvertUTF\.;D:\cocos\projects\ECSFramework\cocos2d\external\poly2tri\..;D:\cocos\projects\ECSFramework\cocos2d\external\md5\..;D:\cocos\projects\ECSFramework\cocos2d\external\unzip\.;D:\cocos\projects\ECSFramework\cocos2d\external\Box2D\include;D:\cocos\projects\ECSFramework\cocos2d\external\chipmunk\include;D:\cocos\projects\ECSFramework\cocos2d\external\freetype2\include\win32\freetype2;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include\bullet;D:\cocos\projects\ECSFramework\cocos2d\external\jpeg\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\openssl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\uv\include;D:\cocos\projects\ECSFramework\cocos2d\external\webp\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\websockets\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\curl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\png\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\gles\include\OGLES;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\icon\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\MP3Decoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OggDecoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OpenalSoft\include;D:\cocos\projects\ECSFramework\cocos2d\external\glfw3\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\cocos\projects\ECSFramework\Classes;D:\cocos\projects\ECSFramework\cocos2d\cocos\audio\include;D:\cocos\projects\ECSFramework\cocos2d;D:\cocos\projects\ECSFramework\cocos2d\cocos;D:\cocos\projects\ECSFramework\cocos2d\extensions;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform;D:\cocos\projects\ECSFramework\cocos2d\cocos\editor-support;D:\cocos\projects\ECSFramework\cocos2d\cocos\base;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform\win32;D:\cocos\projects\ECSFramework\cocos2d\external\recast\..;D:\cocos\projects\ECSFramework\cocos2d\external\tinyxml2\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxhash\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxtea\.;D:\cocos\projects\ECSFramework\cocos2d\external\clipper\.;D:\cocos\projects\ECSFramework\cocos2d\external\edtaa3func\.;D:\cocos\projects\ECSFramework\cocos2d\external\ConvertUTF\.;D:\cocos\projects\ECSFramework\cocos2d\external\poly2tri\..;D:\cocos\projects\ECSFramework\cocos2d\external\md5\..;D:\cocos\projects\ECSFramework\cocos2d\external\unzip\.;D:\cocos\projects\ECSFramework\cocos2d\external\Box2D\include;D:\cocos\projects\ECSFramework\cocos2d\external\chipmunk\include;D:\cocos\projects\ECSFramework\cocos2d\external\freetype2\include\win32\freetype2;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include\bullet;D:\cocos\projects\ECSFramework\cocos2d\external\jpeg\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\openssl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\uv\include;D:\cocos\projects\ECSFramework\cocos2d\external\webp\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\websockets\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\curl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\png\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\gles\include\OGLES;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\icon\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\MP3Decoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OggDecoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OpenalSoft\include;D:\cocos\projects\ECSFramework\cocos2d\external\glfw3\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/uv/prebuilt/win32/uv.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
-    <PreLinkEvent>
-      <Command>
-      </Command>
-    </PreLinkEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup>
-    <CustomBuildStep>
-      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
-xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
-      </Command>
-      <Outputs>$(TargetName).cab</Outputs>
-      <Inputs>$(TargetFileName)</Inputs>
-    </CustomBuildStep>
+    <Link>
+      <AdditionalDependencies>lib\Debug\cocos2d.lib;lib\Debug\external.lib;..\cocos2d\external\Box2D\prebuilt\win32\debug\libbox2d.lib;..\cocos2d\external\chipmunk\prebuilt\win32\debug-lib\libchipmunk.lib;..\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Debug\ext_recast.lib;..\cocos2d\external\bullet\prebuilt\win32\debug\libbullet.lib;..\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;..\cocos2d\external\webp\prebuilt\win32\libwebp.lib;..\cocos2d\external\websockets\prebuilt\win32\websockets.lib;..\cocos2d\external\openssl\prebuilt\win32\libssl.lib;..\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;..\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\Debug\ext_tinyxml2.lib;lib\Debug\ext_xxhash.lib;lib\Debug\ext_xxtea.lib;lib\Debug\ext_clipper.lib;lib\Debug\ext_edtaa3func.lib;lib\Debug\ext_convertUTF.lib;lib\Debug\ext_poly2tri.lib;lib\Debug\ext_md5.lib;..\cocos2d\external\curl\prebuilt\win32\libcurl.lib;..\cocos2d\external\png\prebuilt\win32\libpng.lib;..\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;..\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;..\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;..\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Debug\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/cocos/projects/ECSFramework/proj.win32/Debug/ECSFramework.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Debug/ECSFramework.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(EngineRoot);$(EngineRoot)external;$(EngineRoot)cocos\audio\include;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>D:\cocos\projects\ECSFramework\Classes;D:\cocos\projects\ECSFramework\cocos2d\cocos\audio\include;D:\cocos\projects\ECSFramework\cocos2d;D:\cocos\projects\ECSFramework\cocos2d\cocos;D:\cocos\projects\ECSFramework\cocos2d\extensions;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform;D:\cocos\projects\ECSFramework\cocos2d\cocos\editor-support;D:\cocos\projects\ECSFramework\cocos2d\cocos\base;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform\win32;D:\cocos\projects\ECSFramework\cocos2d\external\recast\..;D:\cocos\projects\ECSFramework\cocos2d\external\tinyxml2\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxhash\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxtea\.;D:\cocos\projects\ECSFramework\cocos2d\external\clipper\.;D:\cocos\projects\ECSFramework\cocos2d\external\edtaa3func\.;D:\cocos\projects\ECSFramework\cocos2d\external\ConvertUTF\.;D:\cocos\projects\ECSFramework\cocos2d\external\poly2tri\..;D:\cocos\projects\ECSFramework\cocos2d\external\md5\..;D:\cocos\projects\ECSFramework\cocos2d\external\unzip\.;D:\cocos\projects\ECSFramework\cocos2d\external\Box2D\include;D:\cocos\projects\ECSFramework\cocos2d\external\chipmunk\include;D:\cocos\projects\ECSFramework\cocos2d\external\freetype2\include\win32\freetype2;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include\bullet;D:\cocos\projects\ECSFramework\cocos2d\external\jpeg\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\openssl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\uv\include;D:\cocos\projects\ECSFramework\cocos2d\external\webp\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\websockets\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\curl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\png\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\gles\include\OGLES;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\icon\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\MP3Decoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OggDecoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OpenalSoft\include;D:\cocos\projects\ECSFramework\cocos2d\external\glfw3\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\cocos\projects\ECSFramework\Classes;D:\cocos\projects\ECSFramework\cocos2d\cocos\audio\include;D:\cocos\projects\ECSFramework\cocos2d;D:\cocos\projects\ECSFramework\cocos2d\cocos;D:\cocos\projects\ECSFramework\cocos2d\extensions;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform;D:\cocos\projects\ECSFramework\cocos2d\cocos\editor-support;D:\cocos\projects\ECSFramework\cocos2d\cocos\base;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform\win32;D:\cocos\projects\ECSFramework\cocos2d\external\recast\..;D:\cocos\projects\ECSFramework\cocos2d\external\tinyxml2\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxhash\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxtea\.;D:\cocos\projects\ECSFramework\cocos2d\external\clipper\.;D:\cocos\projects\ECSFramework\cocos2d\external\edtaa3func\.;D:\cocos\projects\ECSFramework\cocos2d\external\ConvertUTF\.;D:\cocos\projects\ECSFramework\cocos2d\external\poly2tri\..;D:\cocos\projects\ECSFramework\cocos2d\external\md5\..;D:\cocos\projects\ECSFramework\cocos2d\external\unzip\.;D:\cocos\projects\ECSFramework\cocos2d\external\Box2D\include;D:\cocos\projects\ECSFramework\cocos2d\external\chipmunk\include;D:\cocos\projects\ECSFramework\cocos2d\external\freetype2\include\win32\freetype2;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include\bullet;D:\cocos\projects\ECSFramework\cocos2d\external\jpeg\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\openssl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\uv\include;D:\cocos\projects\ECSFramework\cocos2d\external\webp\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\websockets\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\curl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\png\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\gles\include\OGLES;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\icon\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\MP3Decoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OggDecoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OpenalSoft\include;D:\cocos\projects\ECSFramework\cocos2d\external\glfw3\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\cocos\projects\ECSFramework\Classes;D:\cocos\projects\ECSFramework\cocos2d\cocos\audio\include;D:\cocos\projects\ECSFramework\cocos2d;D:\cocos\projects\ECSFramework\cocos2d\cocos;D:\cocos\projects\ECSFramework\cocos2d\extensions;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform;D:\cocos\projects\ECSFramework\cocos2d\cocos\editor-support;D:\cocos\projects\ECSFramework\cocos2d\cocos\base;D:\cocos\projects\ECSFramework\cocos2d\cocos\platform\win32;D:\cocos\projects\ECSFramework\cocos2d\external\recast\..;D:\cocos\projects\ECSFramework\cocos2d\external\tinyxml2\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxhash\.;D:\cocos\projects\ECSFramework\cocos2d\external\xxtea\.;D:\cocos\projects\ECSFramework\cocos2d\external\clipper\.;D:\cocos\projects\ECSFramework\cocos2d\external\edtaa3func\.;D:\cocos\projects\ECSFramework\cocos2d\external\ConvertUTF\.;D:\cocos\projects\ECSFramework\cocos2d\external\poly2tri\..;D:\cocos\projects\ECSFramework\cocos2d\external\md5\..;D:\cocos\projects\ECSFramework\cocos2d\external\unzip\.;D:\cocos\projects\ECSFramework\cocos2d\external\Box2D\include;D:\cocos\projects\ECSFramework\cocos2d\external\chipmunk\include;D:\cocos\projects\ECSFramework\cocos2d\external\freetype2\include\win32\freetype2;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include;D:\cocos\projects\ECSFramework\cocos2d\external\bullet\include\bullet;D:\cocos\projects\ECSFramework\cocos2d\external\jpeg\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\openssl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\uv\include;D:\cocos\projects\ECSFramework\cocos2d\external\webp\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\websockets\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\curl\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\png\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\gles\include\OGLES;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\icon\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\MP3Decoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OggDecoder\include;D:\cocos\projects\ECSFramework\cocos2d\external\win32-specific\OpenalSoft\include;D:\cocos\projects\ECSFramework\cocos2d\external\glfw3\include\win32;D:\cocos\projects\ECSFramework\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/uv/prebuilt/win32/uv.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/cocos/projects/ECSFramework/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
-    <PreLinkEvent>
-      <Command>
-      </Command>
-    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>lib\Release\cocos2d.lib;lib\Release\external.lib;..\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;..\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;..\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Release\ext_recast.lib;..\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;..\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;..\cocos2d\external\webp\prebuilt\win32\libwebp.lib;..\cocos2d\external\websockets\prebuilt\win32\websockets.lib;..\cocos2d\external\openssl\prebuilt\win32\libssl.lib;..\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;..\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\Release\ext_tinyxml2.lib;lib\Release\ext_xxhash.lib;lib\Release\ext_xxtea.lib;lib\Release\ext_clipper.lib;lib\Release\ext_edtaa3func.lib;lib\Release\ext_convertUTF.lib;lib\Release\ext_poly2tri.lib;lib\Release\ext_md5.lib;..\cocos2d\external\curl\prebuilt\win32\libcurl.lib;..\cocos2d\external\png\prebuilt\win32\libpng.lib;..\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;..\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;..\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;..\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Release\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/cocos/projects/ECSFramework/proj.win32/Release/ECSFramework.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/cocos/projects/ECSFramework/proj.win32/bin/ECSFramework/Release/ECSFramework.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\Classes\FrameworkScene.cpp" />
-    <ClCompile Include="..\Classes\Layers\HelloWorldLayer.cpp" />
-    <ClCompile Include="..\Classes\Layers\IntroLayer.cpp" />
-    <ClCompile Include="..\Classes\Layers\MainLayer.cpp" />
-    <ClCompile Include="..\Classes\Systems\SystemInputKeyboard.cpp" />
-    <ClCompile Include="..\Classes\Systems\SystemMovement.cpp" />
-    <ClCompile Include="..\Classes\Systems\SystemVelocity.cpp" />
-    <ClCompile Include="..\Classes\Utils\UtilLayer.cpp" />
-    <ClCompile Include="..\Classes\Utils\UtilSound.cpp" />
-    <ClCompile Include="main.cpp" />
+    <CustomBuild Include="D:\cocos\projects\ECSFramework\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/cocos/projects/ECSFramework/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/cocos/projects/ECSFramework -BD:/cocos/projects/ECSFramework/proj.win32 --check-stamp-file D:/cocos/projects/ECSFramework/proj.win32/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;D:\cocos\projects\ECSFramework\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\cocos\projects\ECSFramework\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\cocos\projects\ECSFramework\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\cocos\projects\ECSFramework\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\3.16.2\CMakeCCompiler.cmake;D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\3.16.2\CMakeCXXCompiler.cmake;D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\3.16.2\CMakeRCCompiler.cmake;D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\3.16.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/cocos/projects/ECSFramework/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/cocos/projects/ECSFramework -BD:/cocos/projects/ECSFramework/proj.win32 --check-stamp-file D:/cocos/projects/ECSFramework/proj.win32/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;D:\cocos\projects\ECSFramework\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\cocos\projects\ECSFramework\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\cocos\projects\ECSFramework\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\cocos\projects\ECSFramework\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\3.16.2\CMakeCCompiler.cmake;D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\3.16.2\CMakeCXXCompiler.cmake;D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\3.16.2\CMakeRCCompiler.cmake;D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\3.16.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\cocos\projects\ECSFramework\proj.win32\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\Components\ComponentInputBind.h" />
     <ClInclude Include="..\Classes\Components\ComponentPCH.h" />
     <ClInclude Include="..\Classes\Components\ComponentPos.h" />
@@ -183,59 +439,94 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Utils\UtilLayer.h" />
     <ClInclude Include="..\Classes\Utils\UtilPCH.h" />
     <ClInclude Include="..\Classes\Utils\UtilSound.h" />
-    <ClInclude Include="..\External\entt\config\config.h" />
-    <ClInclude Include="..\External\entt\core\algorithm.hpp" />
-    <ClInclude Include="..\External\entt\core\family.hpp" />
-    <ClInclude Include="..\External\entt\core\hashed_string.hpp" />
-    <ClInclude Include="..\External\entt\core\ident.hpp" />
-    <ClInclude Include="..\External\entt\core\monostate.hpp" />
-    <ClInclude Include="..\External\entt\entity\actor.hpp" />
-    <ClInclude Include="..\External\entt\entity\attachee.hpp" />
-    <ClInclude Include="..\External\entt\entity\entity.hpp" />
-    <ClInclude Include="..\External\entt\entity\entt_traits.hpp" />
-    <ClInclude Include="..\External\entt\entity\helper.hpp" />
-    <ClInclude Include="..\External\entt\entity\prototype.hpp" />
-    <ClInclude Include="..\External\entt\entity\registry.hpp" />
-    <ClInclude Include="..\External\entt\entity\snapshot.hpp" />
-    <ClInclude Include="..\External\entt\entity\sparse_set.hpp" />
-    <ClInclude Include="..\External\entt\entity\utility.hpp" />
-    <ClInclude Include="..\External\entt\entity\view.hpp" />
-    <ClInclude Include="..\External\entt\entt.hpp" />
-    <ClInclude Include="..\External\entt\locator\locator.hpp" />
-    <ClInclude Include="..\External\entt\process\process.hpp" />
-    <ClInclude Include="..\External\entt\process\scheduler.hpp" />
-    <ClInclude Include="..\External\entt\resource\cache.hpp" />
-    <ClInclude Include="..\External\entt\resource\handle.hpp" />
-    <ClInclude Include="..\External\entt\resource\loader.hpp" />
-    <ClInclude Include="..\External\entt\signal\delegate.hpp" />
-    <ClInclude Include="..\External\entt\signal\dispatcher.hpp" />
-    <ClInclude Include="..\External\entt\signal\emitter.hpp" />
-    <ClInclude Include="..\External\entt\signal\sigh.hpp" />
     <ClInclude Include="..\pch.h" />
-    <ClInclude Include="main.h" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Classes\AppDelegate.h" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\proj.win32\main.h" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\proj.win32\resource.h" />
+    <ClCompile Include="..\Classes\FrameworkScene.cpp" />
+    <ClCompile Include="..\Classes\Layers\HelloWorldLayer.cpp" />
+    <ClCompile Include="..\Classes\Layers\IntroLayer.cpp" />
+    <ClCompile Include="..\Classes\Layers\MainLayer.cpp" />
+    <ClCompile Include="..\Classes\Systems\SystemInputKeyboard.cpp" />
+    <ClCompile Include="..\Classes\Systems\SystemMovement.cpp" />
+    <ClCompile Include="..\Classes\Systems\SystemVelocity.cpp" />
+    <ClCompile Include="..\Classes\Utils\UtilLayer.cpp" />
+    <ClCompile Include="..\Classes\Utils\UtilSound.cpp" />
+    <ClCompile Include="D:\cocos\projects\ECSFramework\Classes\AppDelegate.cpp" />
+    <ClCompile Include="D:\cocos\projects\ECSFramework\proj.win32\main.cpp" />
+    <ResourceCompile Include="D:\cocos\projects\ECSFramework\proj.win32\game.rc" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\CloseNormal.png" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\CloseSelected.png" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\HelloWorld.png" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\fonts\Marker Felt.ttf" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\fonts\arial.ttf" />
+    <ClInclude Include="D:\cocos\projects\ECSFramework\Resources\res\.gitkeep" />
+    <ClCompile Include="D:\cocos\projects\ECSFramework\cocos2d\cocos\precheader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cocos2d\cocos\2d\libcocos2d.vcxproj">
-      <Project>{98a51ba8-fc3a-415b-ac8f-8c7bd464e93e}</Project>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\ZERO_CHECK.vcxproj">
+      <Project>{FC212597-5AE9-3C2F-BCE0-CC21365CC3C3}</Project>
+      <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="..\cocos2d\cocos\editor-support\spine\proj.win32\libSpine.vcxproj">
-      <Project>{b7c2a162-dec9-4418-972e-240ab3cbfcae}</Project>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\SYNC_RESOURCE-ECSFramework.vcxproj">
+      <Project>{B6ADF6E6-4497-35B4-94A6-B176F85F864E}</Project>
+      <Name>SYNC_RESOURCE-ECSFramework</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{4CB58127-9755-3E1B-96AD-498C9432C70B}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{5E9A9A9D-3754-3E23-BE4E-A2923FBE489C}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{BDB069A7-E210-3909-97DB-DA05B55B7D6D}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{9145AABA-D7E2-3658-BA22-8E22A55E5865}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\md5\ext_md5.vcxproj">
+      <Project>{21D1781B-0BC7-31E0-8C80-FA9DA0F2DF34}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{B0973846-C892-37F5-A6F8-E2DE6B857789}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\recast\ext_recast.vcxproj">
+      <Project>{413B79B6-0F04-31A1-A5D9-4D9D11A6B965}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{8D6FF8D3-E5C2-3150-9C9A-5E4CA55AA88F}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{A743FEB8-8798-3B9E-BE2E-3493B95D2DA7}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{D3ED089A-8497-3F59-885E-6D687C6959A2}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{786DDFF8-D248-3413-99A2-524BE2AB103E}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\cocos\projects\ECSFramework\proj.win32\engine\external\external.vcxproj">
+      <Project>{B40F7D6D-04A1-34F6-8BF1-F401BB734371}</Project>
+      <Name>external</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="game.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\External\gsl\gsl" />
-    <None Include="..\External\gsl\gsl_algorithm" />
-    <None Include="..\External\gsl\gsl_assert" />
-    <None Include="..\External\gsl\gsl_byte" />
-    <None Include="..\External\gsl\gsl_util" />
-    <None Include="..\External\gsl\multi_span" />
-    <None Include="..\External\gsl\pointers" />
-    <None Include="..\External\gsl\span" />
-    <None Include="..\External\gsl\string_span" />
+    <None Include="..\.gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

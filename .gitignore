@@ -38,6 +38,13 @@ Resources/
 # Visual Sutdio Ignore Files
 *.user
 *vs/
-proj.win32/Debug.win32/
-proj.win32/game.aps
-
+proj.win32/*
+!proj.win32/*.json
+!proj.win32/*.h
+!proj.win32/*.cpp
+!proj.win32/*.rc
+!proj.win32/res
+!proj.win32/*.sln
+!proj.win32/*.vcxproj
+!proj.win32/*.vcxproj.filters
+!proj.win32/*.vcxproj.filters

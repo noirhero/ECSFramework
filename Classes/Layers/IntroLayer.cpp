@@ -1,4 +1,4 @@
-// Copyright 2018-2019 TAP, Inc. All Rights Reserved.
+// Copyright 2018-2020 TAP, Inc. All Rights Reserved.
 
 #include "../../pch.h"
 #include "IntroLayer.h"
@@ -20,7 +20,7 @@ bool IntroLayer::init() {
     introImage->setPosition(Vec2(size.width * 0.5f + origin.x, size.height * 0.5f + origin.y));
     addChild(introImage);
 
-    constexpr auto delay = 0.1f;
+    constexpr auto delay = 1.0f;
     const auto completeFn = CallFuncN::create(CC_CALLBACK_0(IntroLayer::CompleteIntro, this));
     introImage->runAction(Sequence::create(FadeIn::create(delay), DelayTime::create(delay), FadeOut::create(delay), completeFn, nullptr));
 
